@@ -1,8 +1,8 @@
 {
- "short_name": "Food Buddy",
- "name": "Food Buddy Food Locator",
+    "short_name": "Food Buddy",
+    "name": "Food Buddy Food Locator",
     "background_color": "#2196F3",
-"theme_color": "#2196F3",
+    "theme_color": "#2196F3",
     "display": "standalone" ,
 
  "icons": [
