@@ -1,8 +1,8 @@
 var CACHE_NAME = 'gih-cache';
 var CACHED_URLS = [
   'offline.html',
-  'mystyles.css',
-  'dino.png'
+  'styles.css',
+  'https://code.getmdl.io/1.3.0/material.min.js'
 ];
 
 self.addEventListener('install', function(event) {
