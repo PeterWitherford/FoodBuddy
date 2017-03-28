@@ -1,18 +1,75 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="mystyles.css">
-<title>Test mobile page</title>
-</head>
-
-<body>
-<header><h1>My Test Page</h1></header>
-<div id="container">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim venenatis consequat. Praesent quis odio a neque venenatis ornare. Nam vel sem sed magna porttitor ultrices. Nunc nec turpis vitae lacus efficitur pulvinar in id nibh. Praesent sed mi vel ipsum faucibus ultrices iaculis eget dui. Praesent ultricies velit vel vestibulum convallis. Praesent accumsan luctus sem, at consectetur erat convallis pretium. Nunc pulvinar nec nibh a mollis. Donec a metus in sapien sollicitudin fermentum vitae eu eros.</p>
-<p>Nulla pellentesque nunc vel lectus semper, tincidunt blandit magna maximus. Nam vel imperdiet lacus. Donec et euismod massa, eu suscipit ipsum. Pellentesque lobortis nulla vitae scelerisque elementum. Curabitur at tempor nisl, vel imperdiet orci. Fusce commodo justo nibh, vel convallis purus blandit vitae. Sed a arcu eget mauris rutrum bibendum.</p>
-</div>
-<footer>Footer From Me</footer>
-</body>
-</html>
+ <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+      <!--Let browser know website is optimized for mobile-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="apple-touch-icon" sizes="57x57" href="/FBuddy/img/ico/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/FBuddy/img/ico/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/FBuddy/img/ico/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/FBuddy/img/ico/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/FBuddy/img/ico/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/FBuddy/img/ico/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/FBuddy/img/ico/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/FBuddy/img/ico/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/FBuddy/img/ico/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/FBuddy/img/ico/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/FBuddy/img/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/FBuddy/img/ico/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/FBuddy/img/ico/favicon-16x16.png">
+        <link rel="manifest" href="/FBuddy/manifest.json">
+        <meta name="msapplication-TileColor" content="#673ab7">
+        <meta name="msapplication-TileImage" content="/FBuddy/ms-icon-144x144.png">
+        <meta name="theme-color" content="#673ab7">
+        <title>Food Buddy</title>
+    </head>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="favourites.html">Favourites</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="favourites.html">Favourites</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+            </div>
+  </nav>
+    <body id="darkbody">
+        
+        <div class="row">
+            <div class="col s12 center-align"><img class="responsive-img" src="img/logont.png" alt="Food Buddy's logo - half of a pizza"/></div>
+            <div class="col s12"><h1 class="center-align white-text">Food Buddy</h1></div>
+            <div class="col s12"><p class="center-align white-text">Enter your postcode to find nearby food!</p></div>
+            <div class="col s12"> 
+                <form>
+                    <div class="input-field">
+                      <input id="search" type="search" required>
+                      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    </div>
+                </form>
+            </div>
+            <div class="col s12 center-align"><a class="waves-effect waves-light btn" href="search.html">FIND FOOD</a></div>
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
+              console.log('Service worker registered successfully');
+            }).catch(function(err) {
+              console.log('Service worker registration failed: ', err);
+            });
+          }
+      </script>
+    </body>
+  </html>
