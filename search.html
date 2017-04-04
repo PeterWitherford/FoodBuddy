@@ -106,24 +106,6 @@
                     </div>
             </li>
           </ul>
-            <div id="map-container" style="height: 300px;"></div>
-                <script>
-                function initMap() {
-                    var myLocation = {lat: 53.0103798, lng: -2.1801833};
-                    var map = new google.maps.Map(document.getElementById('map-container'), {
-                    zoom: 2,
-                    center: myLocation
-                    });
-                    var marker = new google.maps.Marker({
-                    position: myLocation,
-                    map: map
-                    });
-                }
-                </script>
-                <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXY7dD1prDn8vqPbIj2eu3-BySJTSs2Dw&callback=initMap">
-                </script>
-        
          <div id="events" class="mdl-grid portfolio-max-width">
 <p>Refresh (or enable Javascript) to view events.</p>
 </div>
