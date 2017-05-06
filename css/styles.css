@@ -1,13 +1,15 @@
-body{
-    transition: 1s;
-    left: 0;
-}
+ @font-face { font-family: Roboto-Bold; src: url('fonts/Roboto-Bold'); } 
+ @font-face { font-family: Roboto-Light; src: url('fonts/Roboto-Light'); } 
+ @font-face { font-family: Roboto-Medium; src: url('fonts/Roboto-Medium'); } 
+ @font-face { font-family: Roboto-Regular; src: url('fonts/Roboto-Regular'); } 
+ @font-face { font-family: Roboto-Thin; src: url('fonts/Roboto-Thin'); } 
 
 #darkbody{
     background-color: #7e57c2  ;
 }
 #lightbody{
     background-color: #eceff1  ;
+        animation: 0.5s ease-in 0s 1 slideInFromRight;
 }
 .input-field{
     background-color: white;
@@ -21,3 +23,20 @@ h5{ margin-top:0;
     margin-bottom: 0;
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
