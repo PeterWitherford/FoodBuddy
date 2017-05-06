@@ -3,7 +3,15 @@ var CACHED_URLS = [
   'offline.html',
     'css/styles.css',
     'css/materialize.css',
-    'img/logont.png'
+    'img/logont.png',
+    'fonts/roboto/MaterialIcons-Regular.eot',
+    'fonts/roboto/MaterialIcons-Regular.woff',
+    'fonts/roboto/MaterialIcons-Regular.woff2',
+    'fonts/roboto/MaterialIcons-Regular.tff',
+    'fonts/roboto/Roboto-Regular.eot',
+    'fonts/roboto/Roboto-Regular.woff',
+    'fonts/roboto/Roboto-Regular.woff2',
+    'fonts/roboto/Roboto-Regular.tff'
 ];
 
 self.addEventListener('install', function(event) {
