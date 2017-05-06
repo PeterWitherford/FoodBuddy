@@ -1,9 +1,9 @@
- @font-face { font-family: Roboto-Bold; src: url('fonts/roboto/Roboto-Bold.tff'); } 
- @font-face { font-family: Roboto-Light; src: url('fonts/roboto/Roboto-Light.tff'); } 
- @font-face { font-family: Roboto-Medium; src: url('fonts/roboto/Roboto-Medium.tff'); } 
- @font-face { font-family: Roboto-Regular; src: url('fonts/roboto/Roboto-Regular.tff'); } 
- @font-face { font-family: Roboto-Thin; src: url('fonts/roboto/Roboto-Thin.tff'); } 
- @font-face { font-family: Roboto-Thin; src: url('fonts/roboto/material-icons.tff'); } 
+@font-face {
+  font-family: 'Material Icons';
+  src: url('fonts/roboto/MaterialIcons-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/roboto/MaterialIcons-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/roboto/MaterialIcons-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/roboto/MaterialIcons-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */}
 
 #darkbody{
     background-color: #7e57c2  ;
