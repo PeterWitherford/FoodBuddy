@@ -7,11 +7,11 @@ var CACHED_URLS = [
     'fonts/roboto/MaterialIcons-Regular.eot',
     'fonts/roboto/MaterialIcons-Regular.woff',
     'fonts/roboto/MaterialIcons-Regular.woff2',
-    'fonts/roboto/MaterialIcons-Regular.tff',
+    'fonts/roboto/MaterialIcons-Regular.ttf',
     'fonts/roboto/Roboto-Regular.eot',
     'fonts/roboto/Roboto-Regular.woff',
     'fonts/roboto/Roboto-Regular.woff2',
-    'fonts/roboto/Roboto-Regular.tff'
+    'fonts/roboto/Roboto-Regular.ttf'
 ];
 
 self.addEventListener('install', function(event) {
