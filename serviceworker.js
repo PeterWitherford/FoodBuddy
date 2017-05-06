@@ -1,8 +1,8 @@
 var CACHE_NAME = 'gih-cache';
 var CACHED_URLS = [
   'offline.html',
-    'styles.css'
-    'materialize.css'
+    'styles.css',
+    'materialize.css',
     'logont.png'
 ];
 
