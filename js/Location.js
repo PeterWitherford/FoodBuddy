@@ -1,5 +1,6 @@
 var x=document.getElementById("search");
 var position = getLocation();
+reverseGeoLookup(position);
 
 function getLocation()
   {
