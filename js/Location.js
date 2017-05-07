@@ -1,4 +1,4 @@
-document.getElementById("clickMe").onclick = getLocation;
+document.getElementById("clickMe").onclick = reverseGeoLookup;
 var x=document.getElementById("search");
 getLocation();
 
@@ -40,3 +40,4 @@ function reverseGeoLookup(lon, lat) {
           }
       }
   }
+}
