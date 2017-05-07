@@ -1,12 +1,11 @@
 var x=document.getElementById("search");
-var position = getLocation();
-reverseGeoLookup(position);
+getLocation;
 
 function getLocation()
   {
   if (navigator.geolocation)
     {
-       navigator.geolocation.getCurrentPosition;
+       navigator.geolocation.getCurrentPosition(reverseGeoLookup);
     }
   else
     {
