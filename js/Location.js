@@ -1,5 +1,5 @@
 var x=document.getElementById("search");
-//var x=document.getElementById("clickMe").onclick = navigator.geolocation.getCurrentPosition(reverseGeoLookup);
+var x=document.getElementById("clickMe").onclick = navigator.geolocation.getCurrentPosition(reverseGeoLookup);
 
 function getLocation()
   {
