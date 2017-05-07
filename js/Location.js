@@ -18,7 +18,7 @@ function reverseGeoLookup(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
   var req = new XMLHttpRequest()
-  req.open("GET", "http://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lon+"&sensor=true", true)
+  req.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lon+"&sensor=true", true)
   req.onreadystatechange = function() {
       if(req.readyState == 4) {
           var result = JSON.parse(req.response).results
