@@ -25,7 +25,7 @@ function reverseGeoLookup(position) {
           for(var i = 0, length = result.length; i < length; i++) {
               for(var j = 0; j < result[i].address_components.length; j++) {
                   var component = result[i].address_components[j]
-                  //console.log(component.long_name);
+                  console.log(component.long_name);
                   if(~component.types.indexOf("postal_code")) {
                     var out = document.getElementById('search');
                     out.innerHTML = 'Approximate Post Code for your location is ' + component.long_name;
