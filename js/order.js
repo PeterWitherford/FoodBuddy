@@ -78,7 +78,7 @@ if (window.PaymentRequest) {
 }
 else {
   // Show unsupported message
-  confirm.style.display = 'none';
+  donateButton.style.display = 'none';
 }
 
 function processPaymentDetails(uiResult) {
