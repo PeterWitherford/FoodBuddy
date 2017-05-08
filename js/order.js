@@ -41,7 +41,10 @@ function addToBasket(item, runningTotal){
     basketTotal.innerHTML=("("+basket.length+")") 
     food.appendChild(document.createTextNode(item.longName + "£" + item.price+"0"));
     list.appendChild(food);
-    runningTotal = runningTotal + item.price;
+    runningTotal = 0;
+    for(var i = 0, len = basket.length; i < len; i++) {
+    runningTotal += backet[i][2];
+}
     total.innerHTML = (runningTotal)
 }
 
