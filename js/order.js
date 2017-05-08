@@ -27,7 +27,28 @@ sscbutton.onclick = function(){addToBasket(ssc)}
 
 function addToBasket(item){
     basket.push(item);
-    console.log(item.longName + "added to basket")
-    $('.error').fadeIn(400).delay(3000).fadeOut(400); //fade out after 3 seconds
-
+    console.log(item.longName + "added to basket");
+    notify(item.longName + "added to basket",1)
 }
+
+function notify(message,status){
+$('.kdnotification-title').html(message);
+funcking();
+if(status==1){
+$('#notification').css({'background-color':'rgba(0,0,0,.4)'}).fadeIn('slow').delay(5000).fadeOut('slow');
+}else{
+$('#notification').css({'background-color':'rgba(216,0,12,.6)'}).fadeIn('slow').delay(3000).fadeOut('slow');
+}
+}
+
+function funcking(){
+      var kd=$('.kdnotification');
+      var viewportHeight = $(window).height(),
+          viewportWidth = $(window).width(),
+          kdheight = kd.height(),kdwidth = kd.width(),
+          hdiff = viewportHeight - kdheight,
+          vdiff = viewportWidth - kdwidth,
+          left= vdiff/2,
+          top = hdiff/2;
+      kd.css({'top':top+'px','left':left+'px'});
+    }
