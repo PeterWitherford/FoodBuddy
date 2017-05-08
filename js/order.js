@@ -71,12 +71,9 @@ var methodData = [{
   }
 }];
 
-var details = {total: {label: 'Test payment', amount: {currency: 'GBP', value: '1.00'}}};
+var details = {total: {label: 'Test payment', amount: {currency: 'GBP', value: '0.00'}}};
 
-/**
- * Here is where we would send the payment info to the server / payment gateway for processing,
- * but I'm not quite ready to take real money from you yet 😉 Simulating by just waiting 2 secs.
- */
+
 function processPaymentDetails(uiResult) {
   return new Promise(function (resolve) {
     setTimeout(function() {
