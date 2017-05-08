@@ -58,7 +58,7 @@ var details = {total: {label: 'order', amount: {currency: 'GBP', value: '9.99'}}
 // Show a native Payment Request UI and handle the result
 
 
-function requestPayment{
+function requestPayment(){
 new PaymentRequest(methodData, details)
   .show()
   .then(function(uiResult) {
@@ -66,5 +66,6 @@ new PaymentRequest(methodData, details)
   })
   .catch(function(error) {
     handlePaymentError(error);
-  });}
+  });
+}
 
