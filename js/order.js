@@ -13,7 +13,7 @@ var basket=[];
 var list = document.getElementById("basketItems");
 var total = document.getElementById("total");
 var runningTotal;
-var food = document.createElement("li");
+var food = document.createElement("p");
 
 var ribs = new MenuItem("ribs", "Spare Ribs in Barbecue Sauce", 4.60);
 var ccm = new MenuItem("ccm", "Chicken Chow Mein", 4.20);
