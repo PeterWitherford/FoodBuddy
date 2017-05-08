@@ -46,7 +46,7 @@ function addToBasket(item, runningTotal){
     for(var i = 0, len = basket.length; i < len; i++) {
     runningTotal += basket[i].price;
 }
-    total.innerHTML = ("total: £" +parseFloat(Math.round(runningTotal * 100) / 100).toFixed(2))
+    total.innerHTML = ("Total: £" +parseFloat(Math.round(runningTotal * 100) / 100).toFixed(2))
 }
 
 
