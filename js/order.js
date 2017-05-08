@@ -27,18 +27,14 @@ sscbutton.onclick = function(){addToBasket(ssc)}
 
 function addToBasket(item){
     basket.push(item);
-    console.log(item.longName + " added to basket");
-    notify(item.longName + "added to basket",1)
+    notify(item.longName + "  added to basket",1)
 }
 
 function notify(message,status){
 $('.kdnotification-title').html(message);
 funcking();
 if(status==1){
-$('#notification').css({'background-color':'rgba(0,0,0,.4)'}).fadeIn('slow').delay(5000).fadeOut('slow');
-}else{
-$('#notification').css({'background-color':'rgba(216,0,12,.6)'}).fadeIn('slow').delay(3000).fadeOut('slow');
-}
+$('#notification').css({'background-color':'rgba(0,0,0,.4)'}).fadeIn('slow').delay(5000).fadeOut('fast');
 }
 
 function funcking(){
