@@ -53,8 +53,7 @@ function addToBasket(item, runningTotal){
 //Request payment
 // UI elements
 var donateButton = document.getElementById('confirm');
-var successMsg = document.getElementById('success');
-var errorMsg = document.getElementById('error');
+var cashButton = document.getElementById('confirmCash');
 
 /**
  * Configuration for our payment. Notes:
@@ -73,6 +72,14 @@ var methodData = [{
 
 var details = {total: {label: 'Test payment', amount: {currency: 'GBP', value: '0.00'}}};
 
+// Check that the Payment Request API is available on this device
+if (window.PaymentRequest) {
+
+}
+else {
+  // Show unsupported message
+  confirm.style.display = 'none';
+}
 
 function processPaymentDetails(uiResult) {
   return new Promise(function (resolve) {
