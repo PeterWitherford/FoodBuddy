@@ -18,11 +18,11 @@ var cfrbutton=document.getElementById("cfr");
 var ccbutton=document.getElementById("cc");
 var sscbutton=document.getElementById("ssc");
 
-ribbutton.onclick = function(){addToBasket("ribs")}
-ccmbutton.onclick = function(){addToBasket("ccm")}
-cfrbutton.onclick = function(){addToBasket("cfr")}
-ccbutton.onclick = function(){addToBasket("cc")}
-sscbutton.onclick = function(){addToBasket("ssc")}
+ribbutton.onclick = function(){addToBasket(ribs)}
+ccmbutton.onclick = function(){addToBasket(ccm)}
+cfrbutton.onclick = function(){addToBasket(cfr)}
+ccbutton.onclick = function(){addToBasket(cc)}
+sscbutton.onclick = function(){addToBasket(ssc)}
 
 
 function addToBasket(item){
