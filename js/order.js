@@ -27,19 +27,22 @@ var ccmbutton=document.getElementById("ccm");
 var cfrbutton=document.getElementById("cfr");
 var ccbutton=document.getElementById("cc");
 var sscbutton=document.getElementById("ssc");
+var confirmbutton=document.getElementById("confirm");
+
 
 ribbutton.onclick = function(){addToBasket(ribs,runningTotal)}
 ccmbutton.onclick = function(){addToBasket(ccm,runningTotal)}
 cfrbutton.onclick = function(){addToBasket(cfr,runningTotal)}
 ccbutton.onclick = function(){addToBasket(cc,runningTotal)}
 sscbutton.onclick = function(){addToBasket(ssc,runningTotal)}
+confirm.onclick = function(){requestPayment}
 
 
 function addToBasket(item, runningTotal){
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
-    food.appendChild(document.createTextNode(item.longName + " £" + item.price+"0"+"<br>"));
+    food.appendChild(document.createTextNode(item.longName + " £" + item.price+"0"));
     list.appendChild(food);
     runningTotal = 0;
     for(var i = 0, len = basket.length; i < len; i++) {
@@ -47,4 +50,21 @@ function addToBasket(item, runningTotal){
 }
     total.innerHTML = (runningTotal)
 }
+
+
+// A couple of example payment networks (others exist too!)
+var methodData = [{supportedMethods: ['visa', 'mastercard']}];
+var details = {total: {label: 'order', amount: {currency: 'GBP', value: '9.99'}}};
+// Show a native Payment Request UI and handle the result
+
+
+function requestPayment{
+new PaymentRequest(methodData, details)
+  .show()
+  .then(function(uiResult) {
+    processPayment(uiResult);
+  })
+  .catch(function(error) {
+    handlePaymentError(error);
+  });}
 
