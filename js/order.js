@@ -10,8 +10,8 @@ function MenuItem(id,longName,price){
   }
 
 var basket=[];
-var ul = document.getElementById("basketItems");
-var li = document.createElement("li");
+var list = document.getElementById("basketItems");
+var food = document.createElement("li").style.;
 
 
 
@@ -39,7 +39,7 @@ function addToBasket(item){
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
-    li.appendChild(document.createTextNode(item.longName + ":\t\t" + "£" + item.price+"0" +"\n"));
-    ul.appendChild(li);
+    food.appendChild(document.createTextNode(item.longName + "£" + item.price+"0"));
+    list.appendChild(food);
 }
 
