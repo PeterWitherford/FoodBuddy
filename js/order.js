@@ -10,6 +10,9 @@ function MenuItem(id,longName,price){
   }
 
 var basket=[];
+var ul = document.getElementById("basketItems");
+var li = document.createElement("li");
+
 
 
 var ribs = new MenuItem("ribs", "Spare Ribs in Barbecue Sauce", 4.60);
@@ -35,5 +38,6 @@ sscbutton.onclick = function(){addToBasket(ssc)}
 function addToBasket(item){
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
-    basketTotal.innerHTML=("("+basket.length+")")   
+    basketTotal.innerHTML=("("+basket.length+")") 
+    i.appendChild(document.createTextNode("Element 4"));
 }
