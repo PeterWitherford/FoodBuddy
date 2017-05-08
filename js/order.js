@@ -27,7 +27,6 @@ var ccmbutton=document.getElementById("ccm");
 var cfrbutton=document.getElementById("cfr");
 var ccbutton=document.getElementById("cc");
 var sscbutton=document.getElementById("ssc");
-var confirmbutton=document.getElementById("confirm");
 
 
 ribbutton.onclick = function(){addToBasket(ribs,runningTotal)}
@@ -35,7 +34,6 @@ ccmbutton.onclick = function(){addToBasket(ccm,runningTotal)}
 cfrbutton.onclick = function(){addToBasket(cfr,runningTotal)}
 ccbutton.onclick = function(){addToBasket(cc,runningTotal)}
 sscbutton.onclick = function(){addToBasket(ssc,runningTotal)}
-confirm.onclick = function(){requestPayment}
 
 
 function addToBasket(item, runningTotal){
@@ -52,20 +50,76 @@ function addToBasket(item, runningTotal){
 }
 
 
-// A couple of example payment networks (others exist too!)
-var methodData = [{supportedMethods: ['visa', 'mastercard']}];
-var details = {total: {label: 'order', amount: {currency: 'GBP', value: '9.99'}}};
-// Show a native Payment Request UI and handle the result
+//Request payment
+// UI elements
+var donateButton = document.getElementById('confirm');
+var successMsg = document.getElementById('success');
+var errorMsg = document.getElementById('error');
 
+/**
+ * Configuration for our payment. Notes:
+ *   - basic-card: We're taking a card payment. Other options may come in the future.
+ *   - We duplicate the payment network names in supportedMethods, to support older format (Samsung Internet v5.0)
+ *   - The spec includes 'supportedTypes' (credit/debit/prepaid) but this does not have browser support yet
+ *   - These are example payment networks. Others are available! See:
+ *     https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/#methoddata-parameter
+ */
+var methodData = [{
+  supportedMethods: ['basic-card', 'visa', 'mastercard', 'amex'],
+  data: {
+    supportedNetworks: ['visa', 'mastercard', 'amex']
+  }
+}];
 
-function requestPayment(){
-new PaymentRequest(methodData, details)
-  .show()
-  .then(function(uiResult) {
-    processPayment(uiResult);
-  })
-  .catch(function(error) {
-    handlePaymentError(error);
+var details = {total: {label: 'Test payment', amount: {currency: 'GBP', value: '1.00'}}};
+
+/**
+ * Here is where we would send the payment info to the server / payment gateway for processing,
+ * but I'm not quite ready to take real money from you yet 😉 Simulating by just waiting 2 secs.
+ */
+function processPaymentDetails(uiResult) {
+  return new Promise(function (resolve) {
+    setTimeout(function() {
+      resolve(uiResult);
+    }, 2000);
   });
 }
+
+function showSuccess() {
+  donateButton.style.display = 'none';
+  errorMsg.style.display = 'none';
+  successMsg.style.display = 'block';
+}
+
+function showError() {
+  donateButton.style.display = 'none';
+  errorMsg.style.display = 'block';
+  successMsg.style.display = 'none';
+}
+
+function onDonateButtonClick() {
+
+  // Initialise the PaymentRequest with our configuration
+  // We could also pass in additional options as a 3rd parameter here, such as:
+  // {requestShipping: true, requestPayerEmail: true, requestPayerPhone: true};
+  var paymentRequest = new PaymentRequest(methodData, details);
+
+  // Show the native UI
+  paymentRequest.show()
+    .then(function(uiResult) {
+      processPaymentDetails(uiResult)
+        .then(function(uiResult) {
+          uiResult.complete('success');
+          showSuccess();
+        });
+    })
+    .catch(function(error) {
+      console.warn('Unable to complete purchase', error);
+      // D'oh. Inform the user the purchase could not be completed...
+      showError();
+    });
+}
+
+donateButton.addEventListener('click', onDonateButtonClick);
+
 
