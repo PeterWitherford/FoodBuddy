@@ -39,7 +39,7 @@ function addToBasket(item){
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
-    li.appendChild(document.createTextNode(item.longName + ":\t\t" + "£" + item.price+"0"));
+    li.appendChild(document.createTextNode(item.longName + ":\t\t" + "£" + item.price+"0" +"\n"));
     ul.appendChild(li);
 }
 
