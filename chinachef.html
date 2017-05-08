@@ -35,7 +35,7 @@
                     <li>China Chef</li>
                       <ul class="right">
                       <li><i class="material-icons">shopping_basket</i></li>
-                      <li id="basketTotal"> (0) </li>
+                      <li id="basketTotal"><a href="#modal1"> (0) </a></li>
                           </ul>
                   </ul>
                 </div>
@@ -137,6 +137,16 @@
            <div id="map-container" style="height: 300px;"></div>
             </div>
         </div>
+        <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
                 <script>
                 function initMap() {
                     var myLocation = {lat: 53.0461717, lng: -2.1950751};
