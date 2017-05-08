@@ -12,7 +12,7 @@ function MenuItem(id,longName,price){
 var basket=[];
 var list = document.getElementById("basketItems");
 var total = document.getElementById("total");
-var runningTotal = 0;;
+var runningTotal = 0;
 var food = document.createElement("li");
 
 var ribs = new MenuItem("ribs", "Spare Ribs in Barbecue Sauce", 4.60);
