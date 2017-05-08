@@ -43,7 +43,7 @@ function addToBasket(item, runningTotal){
     list.appendChild(food);
     runningTotal = 0;
     for(var i = 0, len = basket.length; i < len; i++) {
-    runningTotal += backet[i][2];
+    runningTotal += basket[i][2];
 }
     total.innerHTML = (runningTotal)
 }
