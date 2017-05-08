@@ -10,10 +10,10 @@ function MenuItem(id,longName,price){
   }
 
 var basket=[];
+var list = document.getElementById("basketItems");
+var total = document.getElementById("total");
+var runningTotal = 0;;
 var food = document.createElement("li");
-var numberOfClicks = 0;
-
-
 
 var ribs = new MenuItem("ribs", "Spare Ribs in Barbecue Sauce", 4.60);
 var ccm = new MenuItem("ccm", "Chicken Chow Mein", 4.20);
@@ -28,21 +28,21 @@ var cfrbutton=document.getElementById("cfr");
 var ccbutton=document.getElementById("cc");
 var sscbutton=document.getElementById("ssc");
 
-ribbutton.onclick = function(){addToBasket(ribs)}
-ccmbutton.onclick = function(){addToBasket(ccm)}
-cfrbutton.onclick = function(){addToBasket(cfr)}
-ccbutton.onclick = function(){addToBasket(cc)}
-sscbutton.onclick = function(){addToBasket(ssc)}
+ribbutton.onclick = function(){addToBasket(ribs,runningTotal)}
+ccmbutton.onclick = function(){addToBasket(ccm,runningTotal)}
+cfrbutton.onclick = function(){addToBasket(cfr,runningTotal)}
+ccbutton.onclick = function(){addToBasket(cc,runningTotal)}
+sscbutton.onclick = function(){addToBasket(ssc,runningTotal)}
 
 
-function addToBasket(item){
-    numberOfClicks== numberOfClicks++;
+function addToBasket(item, runningTotal){
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
-    var list = document.getElementById("basketItems"+numberOfClicks);
     food.appendChild(document.createTextNode(item.longName + "£" + item.price+"0"));
-    food.setAttribute("id", "basketItems"+(numberOfClicks+1));
     list.appendChild(food);
+    runningTotal = runningTotal + item.price;
+    total.innerHTML = (runningTotal)
+    return runningTotal;
 }
 
