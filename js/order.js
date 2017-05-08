@@ -10,8 +10,8 @@ function MenuItem(id,longName,price){
   }
 
 var basket=[];
-var list = document.getElementById("basketItems");
 var food = document.createElement("li");
+var numberOfClicks = 0;
 
 
 
@@ -36,10 +36,13 @@ sscbutton.onclick = function(){addToBasket(ssc)}
 
 
 function addToBasket(item){
+    numberOfClicks= numberOfClicks++;
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
-    food.appendChild(document.createTextNode(item.longName + "£" + item.price+"0\n"));
+    var list = document.getElementById("basketItems"+numberOfClicks);
+    food.appendChild(document.createTextNode(item.longName + "£" + item.price+"0"));
+    food.setAttribute("id", "basketItems"+(numberOfClicks+1));
     list.appendChild(food);
 }
 
