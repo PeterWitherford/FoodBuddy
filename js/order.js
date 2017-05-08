@@ -33,7 +33,7 @@ function addToBasket(item){
 function notify(message,status){
 $('.kdnotification-title').html(message);
 funcking();
-$('#notification').css({'background-color':'rgba(0,0,0,.4)'}).fadeIn('slow').delay(5000).fadeOut('fast');
+$('#notification').css({'background-color':'rgba(0,0,0,.4)'}).fadeIn('fast').delay(1000).fadeOut('fast');
 
 function funcking(){
       var kd=$('.kdnotification');
