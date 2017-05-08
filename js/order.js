@@ -27,5 +27,7 @@ sscbutton.onclick = function(){addToBasket(ssc)}
 
 function addToBasket(item){
     basket.push(item);
-    console.log(item + "added")
+    console.log(item.longName + "added to basket")
+    $('.error').fadeIn(400).delay(3000).fadeOut(400); //fade out after 3 seconds
+
 }
