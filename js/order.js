@@ -36,7 +36,7 @@ sscbutton.onclick = function(){addToBasket(ssc)}
 
 
 function addToBasket(item){
-    numberOfClicks= numberOfClicks++;
+    numberOfClicks== numberOfClicks++;
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
