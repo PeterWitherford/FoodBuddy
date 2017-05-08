@@ -27,13 +27,15 @@ sscbutton.onclick = function(){addToBasket(ssc)}
 
 function addToBasket(item){
     basket.push(item);
-    notify(item.longName + "  added to basket",1)
+    Materialize.toast(item.longName + " added to basket", 4000);
+
+    //notify(item.longName + "  added to basket",1)
 }
 
 function notify(message,status){
 $('.kdnotification-title').html(message);
 funcking();
-$('#notification').css({'background-color':'rgba(0,0,0,.4)'}).fadeIn('fast').delay(1000).fadeOut('fast');
+$('#notification').css({'background-color':'rgba(0,0,0,.4)'}).fadeIn('fast').delay(1500).fadeOut('fast');
 
 function funcking(){
       var kd=$('.kdnotification');
