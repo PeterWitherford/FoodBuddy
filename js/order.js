@@ -11,7 +11,7 @@ function MenuItem(id,longName,price){
 
 var basket=[];
 var list = document.getElementById("basketItems");
-var food = document.createElement("li").style.;
+var food = document.createElement("li");
 
 
 
