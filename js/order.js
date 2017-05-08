@@ -39,6 +39,8 @@ function addToBasket(item, runningTotal){
     basket.push(item);
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
+    var children = list.children.length + 1
+    food.setAttribute("id", "element"+children)
     food.appendChild(document.createTextNode(item.longName + "£" + item.price+"0"));
     list.appendChild(food);
     runningTotal = 0;
