@@ -40,6 +40,7 @@ function addToBasket(item){
     Materialize.toast(item.longName + " added to basket", 4000);
     basketTotal.innerHTML=("("+basket.length+")") 
     food.appendChild(document.createTextNode(item.longName + "£" + item.price+"0"));
+    food.setAttribute("id", "clickMe");
     list.appendChild(food);
 }
 
