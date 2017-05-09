@@ -42,3 +42,12 @@ h5{ margin-top:0;
 #disabledButton{
     margin:5px;
 }
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
