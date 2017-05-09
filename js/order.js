@@ -93,9 +93,7 @@ function processPaymentDetails(uiResult) {
 }
 
 function showSuccess() {
-  donateButton.style.display = 'none';
-  errorMsg.style.display = 'none';
-  successMsg.style.display = 'block';
+  window.location.href = 'https://peterwitherford.github.io/FoodBuddy/orderComplete.html';
 }
 
 function showError() {
