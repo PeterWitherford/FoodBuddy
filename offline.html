@@ -44,10 +44,23 @@
       </ul>
             </div>
   </nav>
-    <body id="darkbody">
-        
-        
-<p> offline page</p>
+        <body id="darkbody">
+        <div class="row">
+            <div class="col s12 center-align"><img class="responsive-img" src="img/logont.png" srcset="img/logont-200.png 1x, img/logont-350.png 2x, img/logont.png 3x" alt="Food Buddy's logo - half of a pizza"/></div>
+            <div class="col s12"><h1 class="center-align white-text">Food Buddy</h1></div>
+            <div class="col s12"><p class="center-align white-text">Enter your postcode to find nearby food!</p></div>
+            <div class="col s8 offset-s2"> 
+                <form>
+                    <div class="input-field">
+                      <input disabled id="disabled" type="text" class="validate">
+          <label for="disabled">New search not avaliable while offline</label>
+                    </div>
+                </form>
+            </div>
+            <div  class="col s12 center-align"><a id="disabledButton" class="waves-effect waves-light btn" >FIND MY LOCATION</a></div>
+            <div class="col s12 center-align"><a  id="disabledButton"  class="waves-effect waves-light btn" >FIND FOOD</a></div>
+
+      </div>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -60,5 +73,4 @@
             });
           }
       </script>
-    </body>
   </html>

@@ -36,3 +36,9 @@ h5{ margin-top:0;
 #basketTotal{
     margin-right: 5px;
 }
+
+#disabled{margin: 0;}
+
+#disabledButton{
+    margin:5px;
+}
