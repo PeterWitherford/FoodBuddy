@@ -93,7 +93,7 @@ function processPaymentDetails(uiResult) {
 }
 
 function showSuccess() {
-  window.location.href = 'https://peterwitherford.github.io/FoodBuddy/orderComplete.html';
+  window.location.href = 'https://peterwitherford.github.io/FoodBuddy/ordercomplete.html';
 }
 
 function showError() {
