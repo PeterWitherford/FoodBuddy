@@ -3,6 +3,9 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
+document.getElementById('noJava').style.display = 'none';
+
+
 function MenuItem(id,longName,price){
     this.id = id;
     this.longName = longName;
